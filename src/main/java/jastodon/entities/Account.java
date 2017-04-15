@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Account {
 
-    public String id;
+    public int id;
 
     public String username;
 
@@ -30,12 +30,12 @@ public class Account {
     public Date createdAt;
 
     @SerializedName("followers_count")
-    public String followersCount;
+    public int followersCount;
 
     @SerializedName("following_count")
-    public String followingCount;
+    public int followingCount;
 
     @SerializedName("statuses_count")
-    public String statusesCount;
+    public int statusesCount;
 
 }

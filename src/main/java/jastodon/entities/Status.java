@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Status {
 
-    public String id;
+    public int id;
 
     public String uri;
 
@@ -19,12 +19,12 @@ public class Status {
     public Account account;
 
     @SerializedName("in_reply_to_id")
-    public String inReplyToId;
+    public int inReplyToId;
 
     @SerializedName("in_reply_to_account_id")
-    public String inReplyToAccountId;
+    public int inReplyToAccountId;
 
-    public String reblog;
+    public Status reblog;
 
     public String content;
 
@@ -32,10 +32,10 @@ public class Status {
     public Date createdAt;
 
     @SerializedName("reblogs_count")
-    public String reblogsCount;
+    public int reblogsCount;
 
     @SerializedName("favourites_count")
-    public String favouritesCount;
+    public int favouritesCount;
 
     public boolean reblogged;
 
@@ -53,11 +53,11 @@ public class Status {
     }
 
     //@SerializedName("media_attachments")
-    //public Attachments[] mediaAttachments;
+    //public Attachment[] mediaAttachments;
 
-    //public Mentions[] mentions;
+    //public Mention[] mentions;
 
-    //public Tags[] tags;
+    //public Tag[] tags;
 
     //public Application application;
 }
