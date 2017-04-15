@@ -43,7 +43,8 @@ public class Status {
 
     public boolean sensitive;
 
-    public String spoiler_text;
+    @SerializedName("spoiler_text")
+    public String spoilerText;
 
     public enum Visibility {
         @SerializedName("public")   PUBLIC,
