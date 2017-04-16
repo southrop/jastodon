@@ -75,8 +75,8 @@ public interface Accounts {
     @GET("/api/v1/accounts/{id}/statuses")
     Call<Status[]> getStatuses(
             @Path("id") int accountId,
-            @Query("only_media") boolean onlyMedia,
-            @Query("exclude_replies") boolean excludeReplies
+            @Query("only_media") Boolean onlyMedia,
+            @Query("exclude_replies") Boolean excludeReplies
     );
 
     /**
