@@ -60,5 +60,5 @@ public class Status {
 
     //public Tag[] tags;
 
-    //public Application application;
+    public Application application;
 }
