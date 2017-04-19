@@ -3,7 +3,7 @@ package jastodon.internal;
 import javax.annotation.Nonnull;
 
 /**
- * @author admin
+ * @author Southrop
  */
 
 public class MastodonApi {

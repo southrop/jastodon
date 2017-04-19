@@ -12,7 +12,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * @author admin
+ * @author Southrop
  */
 
 public class MastodonApiClient {
