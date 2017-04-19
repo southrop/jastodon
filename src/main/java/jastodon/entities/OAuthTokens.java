@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Southrop
  */
 
-public class AppTokens {
+public class OAuthTokens {
 
     public String id;
 

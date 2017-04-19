@@ -1,6 +1,6 @@
 package jastodon.services;
 
-import jastodon.entities.AppTokens;
+import jastodon.entities.OAuthTokens;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -14,7 +14,7 @@ public interface AppService {
 
     @FormUrlEncoded
     @POST("api/v1/apps")
-    Call<AppTokens> registerApp(
+    Call<OAuthTokens> registerApp(
             @Field("client_name") String clientName,
             @Field("redirect_uris") String redirectUris,
             @Field("scopes") String scopes,
