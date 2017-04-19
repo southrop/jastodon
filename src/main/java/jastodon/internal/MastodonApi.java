@@ -13,7 +13,13 @@ public class MastodonApi {
     private final String baseUrl;
 
     public MastodonApi(@Nonnull String host) {
-        this.baseUrl = BASE_SCHEME + host + "/";
+        if (!host.startsWith("http")) {
+            host = BASE_SCHEME + host;
+        }
+        if (!host.endsWith("/")) {
+            host = host + "/";
+        }
+        this.baseUrl = host;
     }
 
     public String getBaseUrl() {
