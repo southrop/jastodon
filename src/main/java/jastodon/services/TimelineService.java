@@ -1,4 +1,4 @@
-package jastodon;
+package jastodon.services;
 
 import jastodon.entities.Status;
 
@@ -11,7 +11,7 @@ import retrofit2.http.Query;
  * @author Southrop
  */
 
-public interface Timelines {
+public interface TimelineService {
 
     @GET("timelines/home")
     Call<Status[]> getHomeTimeline();

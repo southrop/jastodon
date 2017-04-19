@@ -1,4 +1,4 @@
-package jastodon;
+package jastodon.services;
 
 import jastodon.entities.AppTokens;
 import retrofit2.Call;
@@ -10,7 +10,7 @@ import retrofit2.http.POST;
  * @author Southrop
  */
 
-public interface Apps {
+public interface AppService {
 
     @FormUrlEncoded
     @POST("apps")

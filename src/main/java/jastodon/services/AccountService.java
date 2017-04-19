@@ -1,4 +1,4 @@
-package jastodon;
+package jastodon.services;
 
 import jastodon.entities.Account;
 
@@ -16,7 +16,7 @@ import retrofit2.http.Query;
  * @author Southrop
  */
 
-public interface Accounts {
+public interface AccountService {
 
     /**
      * Retrieves the details of a specified account.

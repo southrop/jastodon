@@ -1,4 +1,4 @@
-package jastodon;
+package jastodon.services;
 
 import jastodon.entities.Status;
 
@@ -10,6 +10,6 @@ import retrofit2.http.Path;
  * @author Southrop
  */
 
-public interface Statuses {
+public interface StatusesService {
 
 }
