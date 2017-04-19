@@ -1,6 +1,6 @@
 package jastodon.services;
 
-import jastodon.entities.Status;
+import jastodon.models.Status;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

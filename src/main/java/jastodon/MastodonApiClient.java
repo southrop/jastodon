@@ -4,7 +4,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import jastodon.internal.MastodonApi;
 import jastodon.services.AccountService;
-import jastodon.services.AppService;
+import jastodon.services.AuthService;
 import jastodon.services.StatusesService;
 import jastodon.services.TimelineService;
 import okhttp3.OkHttpClient;
@@ -16,6 +16,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class MastodonApiClient {
+    public static final String  OAUTH_AUTHORIZE_PATH = "/oauth/authorize";
+
     private final ConcurrentHashMap<Class, Object> services;
     private final Retrofit retrofit;
 
@@ -36,8 +38,8 @@ public class MastodonApiClient {
         return getService(AccountService.class);
     }
 
-    public AppService getAppService() {
-        return getService(AppService.class);
+    public AuthService getAuthService() {
+        return getService(AuthService.class);
     }
 
     public StatusesService getStatusesService() {

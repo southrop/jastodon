@@ -1,4 +1,4 @@
-package jastodon.entities;
+package jastodon.models;
 
 import com.google.gson.annotations.SerializedName;
 

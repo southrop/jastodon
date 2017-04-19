@@ -1,4 +1,4 @@
-package jastodon.entities;
+package jastodon.models.oauth;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Southrop
  */
 
-public class OAuthTokens {
+public class ClientTokens {
 
     public String id;
 

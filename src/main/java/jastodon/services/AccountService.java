@@ -1,9 +1,9 @@
 package jastodon.services;
 
-import jastodon.entities.Account;
+import jastodon.models.Account;
 
-import jastodon.entities.Relationship;
-import jastodon.entities.Status;
+import jastodon.models.Relationship;
+import jastodon.models.Status;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
