@@ -13,15 +13,15 @@ import retrofit2.http.Query;
 
 public interface TimelineService {
 
-    @GET("timelines/home")
+    @GET("api/v1/timelines/home")
     Call<Status[]> getHomeTimeline();
 
-    @GET("timelines/public")
+    @GET("api/v1/timelines/public")
     Call<Status[]> getPublicTimeline(
             @Query("local") Boolean onlyLocal
     );
 
-    @GET("timelines/tag/{hashtag}")
+    @GET("api/v1/timelines/tag/{hashtag}")
     Call<Status[]> getTagTimeline(
             @Path("hashtag") String hashtag,
             @Query("local") Boolean onlyLocal

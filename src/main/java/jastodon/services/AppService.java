@@ -13,7 +13,7 @@ import retrofit2.http.POST;
 public interface AppService {
 
     @FormUrlEncoded
-    @POST("apps")
+    @POST("api/v1/apps")
     Call<AppTokens> registerApp(
             @Field("client_name") String clientName,
             @Field("redirect_uris") String redirectUris,
