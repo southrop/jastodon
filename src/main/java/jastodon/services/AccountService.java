@@ -98,9 +98,6 @@ public interface AccountService {
      * @param limit           (optional) number of statuses to be returned (default: 40, max: 80).
      * @return an array of {@link Status}es that the specified user has made.
      */
-    /* TODO: Implement max_id etc.
-
-     */
     @GET("api/v1/accounts/{id}/statuses")
     Call<Status[]> getStatuses(
             @Path("id") int accountId,
