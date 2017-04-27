@@ -1,11 +1,9 @@
 package jastodon.services;
 
-import javax.annotation.Nullable;
-
 import jastodon.models.Account;
-
 import jastodon.models.Relationship;
 import jastodon.models.Status;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
