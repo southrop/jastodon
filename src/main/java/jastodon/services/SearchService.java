@@ -1,5 +1,7 @@
 package jastodon.services;
 
+import java.util.List;
+
 import jastodon.models.Account;
 import jastodon.models.Results;
 import retrofit2.Call;
@@ -32,10 +34,10 @@ public interface SearchService {
      * <code>username@domain</code> format and is not already in the database.
      * @param query       search query.
      * @param limit       number of accounts to be returned (default: 40).
-     * @return an array of {@link Account}s that match the given search query.
+     * @return            a list of {@link Account}s that match the given search query.
      */
     @GET("api/v1/accounts/search")
-    Call<Account[]> searchAccounts(
+    Call<List<Account>> searchAccounts(
             @Query("q") String query,
             @Query("limit") int limit
     );

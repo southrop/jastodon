@@ -1,5 +1,7 @@
 package jastodon.services;
 
+import java.util.List;
+
 import jastodon.models.Status;
 
 import retrofit2.Call;
@@ -14,17 +16,28 @@ import retrofit2.http.Query;
 public interface TimelineService {
 
     @GET("api/v1/timelines/home")
-    Call<Status[]> getHomeTimeline();
+    Call<List<Status>> getHomeTimeline(
+            @Query("local") Boolean local,
+            @Query("max_id") Integer maxId,
+            @Query("since_id") Integer sinceId,
+            @Query("limit") Integer limit
+    );
 
     @GET("api/v1/timelines/public")
-    Call<Status[]> getPublicTimeline(
-            @Query("local") Boolean onlyLocal
+    Call<List<Status>> getPublicTimeline(
+            @Query("local") Boolean local,
+            @Query("max_id") Integer maxId,
+            @Query("since_id") Integer sinceId,
+            @Query("limit") Integer limit
     );
 
     @GET("api/v1/timelines/tag/{hashtag}")
-    Call<Status[]> getTagTimeline(
+    Call<List<Status>> getTagTimeline(
             @Path("hashtag") String hashtag,
-            @Query("local") Boolean onlyLocal
+            @Query("local") Boolean local,
+            @Query("max_id") Integer maxId,
+            @Query("since_id") Integer sinceId,
+            @Query("limit") Integer limit
     );
 
 }

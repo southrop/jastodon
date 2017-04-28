@@ -1,5 +1,7 @@
 package jastodon.services;
 
+import java.util.List;
+
 import jastodon.models.Account;
 import jastodon.models.Relationship;
 import retrofit2.Call;
@@ -32,11 +34,11 @@ public interface RelationshipService {
      * Gets the relationship between the current account and the specified account(s).
      * @param accountIds       ID of the accounts whose relationship with the current account is to
      *                         be retrieved.
-     * @return                 an array of {@link Relationship} objects representing the
+     * @return                 a list of {@link Relationship} objects representing the
      *                         relationships between the specified accounts and the current account.
      */
     @GET("api/v1/accounts/relationships")
-    Call<Relationship[]> getRelationships(@Query("id[]") int... accountIds);
+    Call<List<Relationship>> getRelationships(@Query("id[]") int... accountIds);
 
     /**
      * Follows the specified account for the current account.
@@ -72,11 +74,11 @@ public interface RelationshipService {
      *                        or equal to this.
      * @param sinceId         (optional) whether to only return accounts with ID greater than this.
      * @param limit           (optional) number of accounts to be returned (default: 40, max: 80).
-     * @return                an array of {@link Account}s that have requested to follow the
+     * @return                a list of {@link Account}s that have requested to follow the
      *                        authenticated user.
      */
     @GET("api/v1/follow_requests")
-    Call<Account[]> getFollowRequests(
+    Call<List<Account>> getFollowRequests(
             @Query("max_id") Integer maxId,
             @Query("since_id") Integer sinceId,
             @Query("limit") Integer limit
@@ -104,10 +106,10 @@ public interface RelationshipService {
      *                        or equal to this.
      * @param sinceId         (optional) whether to only return accounts with ID greater than this.
      * @param limit           (optional) number of accounts to be returned (default: 40, max: 80).
-     * @return                an array of {@link Account}s blocked by the authenticated user.
+     * @return                a list of {@link Account}s blocked by the authenticated user.
      */
     @GET("api/v1/blocks")
-    Call<Account[]> getBlocks(
+    Call<List<Account>> getBlocks(
             @Query("max_id") Integer maxId,
             @Query("since_id") Integer sinceId,
             @Query("limit") Integer limit

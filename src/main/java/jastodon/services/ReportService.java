@@ -1,5 +1,7 @@
 package jastodon.services;
 
+import java.util.List;
+
 import jastodon.models.Report;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -15,10 +17,10 @@ public interface ReportService {
 
     /**
      * Retrieves a list of reports submitted by the authenticated user.
-     * @return an array of {@link Report}s submitted by the authenticated user.
+     * @return a list of {@link Report}s submitted by the authenticated user.
      */
     @GET("api/v1/reports")
-    Call<Report[]> getReports();
+    Call<List<Report>> getReports();
 
     /**
      *

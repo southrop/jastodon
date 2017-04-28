@@ -1,5 +1,7 @@
 package jastodon.services;
 
+import java.util.List;
+
 import jastodon.models.Account;
 import jastodon.models.Status;
 
@@ -29,10 +31,10 @@ public interface AccountService {
      *                        or equal to this.
      * @param sinceId         (optional) whether to only return statuses with ID greater than this.
      * @param limit           (optional) number of statuses to be returned (default: 40, max: 80).
-     * @return an array of {@link Account}s that follow the specified user.
+     * @return                a list of {@link Account}s that follow the specified user.
      */
     @GET("api/v1/accounts/{id}/followers")
-    Call<Account[]> getAccountFollowers(
+    Call<List<Account>> getAccountFollowers(
             @Path("id") int accountId,
             @Query("max_id") Integer maxId,
             @Query("since_id") Integer sinceId,
@@ -46,10 +48,10 @@ public interface AccountService {
      *                        or equal to this.
      * @param sinceId         (optional) whether to only return statuses with ID greater than this.
      * @param limit           (optional) number of statuses to be returned (default: 40, max: 80).
-     * @return an array of {@link Account}s that the specified user is following.
+     * @return                a list of {@link Account}s that the specified user is following.
      */
     @GET("api/v1/accounts/{id}/following")
-    Call<Account[]> getAccountFollowing(
+    Call<List<Account>> getAccountFollowing(
             @Path("id") int accountId,
             @Query("max_id") Integer maxId,
             @Query("since_id") Integer sinceId,
@@ -65,10 +67,10 @@ public interface AccountService {
      *                        or equal to this.
      * @param sinceId         (optional) whether to only return statuses with ID greater than this.
      * @param limit           (optional) number of statuses to be returned (default: 40, max: 80).
-     * @return an array of {@link Status}es that the specified user has made.
+     * @return                a list of {@link Status}es that the specified user has made.
      */
     @GET("api/v1/accounts/{id}/statuses")
-    Call<Status[]> getStatuses(
+    Call<List<Status>> getStatuses(
             @Path("id") int accountId,
             @Query("only_media") Boolean onlyMedia,
             @Query("exclude_replies") Boolean excludeReplies,
