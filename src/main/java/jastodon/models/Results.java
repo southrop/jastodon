@@ -1,7 +1,7 @@
 package jastodon.models;
 
 /**
- * @author admin
+ * @author Southrop
  */
 
 public class Results {
