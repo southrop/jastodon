@@ -5,6 +5,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import jastodon.internal.MastodonApi;
 import jastodon.services.AccountService;
 import jastodon.services.AuthService;
+import jastodon.services.FavouriteService;
+import jastodon.services.NotificationService;
+import jastodon.services.ProfileService;
+import jastodon.services.RelationshipService;
+import jastodon.services.ReportService;
+import jastodon.services.SearchService;
 import jastodon.services.StatusesService;
 import jastodon.services.TimelineService;
 import okhttp3.OkHttpClient;
@@ -40,6 +46,30 @@ public class MastodonApiClient {
 
     public AuthService getAuthService() {
         return getService(AuthService.class);
+    }
+
+    public FavouriteService getFavouriteService() {
+        return getService(FavouriteService.class);
+    }
+
+    public NotificationService getNotificationService() {
+        return getService(NotificationService.class);
+    }
+
+    public ProfileService getProfileService() {
+        return getService(ProfileService.class);
+    }
+
+    public RelationshipService getRelationshipService() {
+        return getService(RelationshipService.class);
+    }
+
+    public ReportService getReportService() {
+        return getService(ReportService.class);
+    }
+
+    public SearchService getSearchService() {
+        return getService(SearchService.class);
     }
 
     public StatusesService getStatusesService() {
